@@ -33,7 +33,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=mojito
 
 # fixing google play protect certification bullshit
-BUILD_FINGERPRINT := google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys
-
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.build.fingerprint=$(BUILD_FINGERPRINT)
+#BUILD_FINGERPRINT := google/redfin/redfin:11/RQ3A.210605.005/7349499:user/release-keys
+#
+#PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+#    ro.build.fingerprint=$(BUILD_FINGERPRINT)
