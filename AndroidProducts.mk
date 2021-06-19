@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_mojito.mk
+    $(LOCAL_DIR)/ssos_mojito.mk

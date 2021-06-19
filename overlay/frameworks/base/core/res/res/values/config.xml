@@ -26,6 +26,13 @@
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
      <bool name="config_automatic_brightness_available">true</bool>
 
+ <!-- Whether the device supports Smart Pixels -->
+ <bool name="config_enableSmartPixels">true</bool>    
+
+  <!-- If true, the display will be shifted around in ambient mode. -->
+  <bool name="config_enableBurnInProtection">true</bool>
+
+
     <!-- Boolean indicating if current platform supports HFP inband ringing -->
      <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
 
@@ -187,6 +194,11 @@
          dim before the device goes to sleep.
     -->
      <fraction name="config_maximumScreenDimRatio">29.999996%</fraction>
+
+    <!-- Max visible notification icons -->
+    <integer name="config_maxVisibleNotificationIcons">4</integer>
+    <integer name="config_maxVisibleNotificationIconsOnLock">5</integer>
+
 
     <!-- Operating volatage for bluetooth controller. 0 by default-->
      <integer name="config_bluetooth_operating_voltage_mv">0</integer>

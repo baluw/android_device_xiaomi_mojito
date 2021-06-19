@@ -82,8 +82,12 @@ PRODUCT_PACKAGES += \
 
 # Cryptfs
 PRODUCT_PACKAGES += \
-    libcryptfs_hw \
-    vendor.qti.hardware.cryptfshw@1.0
+    libcryptfs_hw
+
+# Cryptfs wandy kang
+PRODUCT_HOST_PACKAGES += \
+       vendor.qti.hardware.cryptfshw@1.0
+
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
@@ -235,3 +239,8 @@ PRODUCT_BOOT_JARS += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-wfd.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-wfd.xml
+
+# SSOS specific shit.
+PRODUCT_BOARD_PLATFORM := sm6150
+PRODUCT_USES_QCOM_HARDWARE := true
+

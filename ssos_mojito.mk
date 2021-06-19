@@ -11,17 +11,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from mojito device
 $(call inherit-product, device/xiaomi/mojito/device.mk)
 
-# Inherit some common PixelExperience stuff
+# Inherit some common ShapeShiftOS stuff
 #TARGET_USES_AOSP_RECOVERY := true
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_INCLUDE_LIVE_WALLPAPERS := false
-$(call inherit-product, vendor/arrow/config/common.mk)
-
-# build gapps
-ARROW_GAPPS := true
+#TARGET_INCLUDE_LIVE_WALLPAPERS := false
+$(call inherit-product, vendor/ssos/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := arrow_mojito
+PRODUCT_NAME := ssos_mojito
 PRODUCT_DEVICE := mojito
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := Redmi Note 10
@@ -32,8 +29,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=mojito
 
-# fixing google play protect certification bullshit
-#BUILD_FINGERPRINT := google/redfin/redfin:11/RQ3A.210605.005/7349499:user/release-keys
-#
-#PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-#    ro.build.fingerprint=$(BUILD_FINGERPRINT)
+# Inherit ShapeShiftOS common properties.
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.ssos.cpu=SD678
